@@ -1,0 +1,14 @@
+<body>
+<section>
+  <div class="major">
+    <h1>To Do List</h1>
+    <h6>Developed By Amit Singh</h6>
+    <input type="text" [(ngModel)]="tasks" placeholder="What you want to do today?"><br><br>
+    <button type="submit" (click) = 'addlist(tasks)' [disabled]="!tasks" class="waves-effect waves-light btn">Add</button><br><br>
+    <table class="striped" align="center">
+    <tr *ngFor="let i of works;"><th><input type="checkbox" id="{{i}}" class="filled-in"><label for="{{i}}" class="itemsof">{{i}}</label></th><th><button type="submit" (click) = 'deletelist(i)' class="waves-effect waves-light btn">Delete</button></th></tr>
+    </table>
+   </div>
+   <input type="checkbox" id="myCheckbox" class="filled-in">
+</section>
+</body>
