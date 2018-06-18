@@ -8,7 +8,17 @@ section .major{
     font-family: "Helvetica 35 thin";
     font-weight: bold;
     overflow-y: hidden;
+    overflow-x: hidden;
    
+}
+.itemsof{
+    color:black;
+    font-size:20px;
+}
+table{
+    max-width: 700px;
+    margin: 0 auto;
+    
 }
 table th label{
     padding: 0 25px;
@@ -23,3 +33,17 @@ table th button{
 input[type=checkbox]:checked + label.itemsof{
     text-decoration: line-through;
   }
+input[type=text]{
+    padding: 0 10px;
+    width: 60%;
+    font-size:20px;
+}
+.bottom
+{
+    position:relative;
+    animation:animatebottom 0.9s
+}
+    @keyframes animatebottom{
+    from{bottom:-300px;opacity:0} 
+    to{bottom:0;opacity:1}
+}
