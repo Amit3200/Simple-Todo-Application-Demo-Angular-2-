@@ -1,3 +1,28 @@
 .blue-bg{
     background:blue;
 }
+.appsd{
+    font-family: "Helvetica 35 thin";
+    font-weight: bold;
+}
+.appsd h4{
+    font-family: "Helvetica 35 thin";
+    font-weight: bold;
+}
+.appsd h6{
+    font-family: "Helvetica 35 thin";
+    font-weight: bold;
+    font-size: 16px;
+    float: right;
+    margin-top:1px;
+    padding:0 15px;
+}
+.bottom
+{
+    position:relative;
+    animation:animatebottom 0.4s
+}
+    @keyframes animatebottom{
+    from{bottom:-300px;opacity:0} 
+    to{bottom:0;opacity:1}
+}

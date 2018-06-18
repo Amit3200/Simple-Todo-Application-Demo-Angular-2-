@@ -12,6 +12,7 @@ export class TodoComponent implements OnInit {
   public proedit:boolean=true;
   public k:any;
   public taskedit:string="";
+  public krona:boolean=true;
 
   public addlist(tasks){
     this.works.push(tasks);
@@ -25,13 +26,14 @@ export class TodoComponent implements OnInit {
 
   public editlist(element){
     this.k=this.works.indexOf(element);
-    this.proedit=!this.proedit;
+    this.krona=!this.krona;
     console.log(this.k);
   }
 
   public makechange(taskedit1){
     this.works[this.k]=taskedit1;
     this.taskedit="";
+    this.krona=!this.krona;
     console.log(this.taskedit)
   }
   constructor() { }

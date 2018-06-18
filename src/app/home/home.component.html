@@ -1,0 +1,10 @@
+<h1>Class</h1>
+<input type="text" [(ngModel)]="userName" placeholder="Type your name"/>
+<button type="button" class="btn btn-danger" (click)="showDiv=true;" [disabled]="!userName">Show</button>
+<app-about *ngIf="showDiv" [namProperty]="userName"></app-about>
+<input type="number" placeholder="enter array index" [(ngModel)]="arrayIndex">
+<button type="btn" class="btn btn-primary" (click)="convertVar(arrayIndex)">Show</button>
+<div *ngIf="arrayIndex && myarray[ind]">
+<h1 *ngFor="let item of myarray[ind]; let index=index">{{item}}</h1>
+</div>
+<h1 *ngIf="!arrayIndex || !myarray[ind]">Invalid</h1>

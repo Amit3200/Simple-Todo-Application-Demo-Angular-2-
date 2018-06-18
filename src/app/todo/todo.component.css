@@ -38,6 +38,10 @@ input[type=text]{
     width: 60%;
     font-size:20px;
 }
+h5{
+    font-family: "Helvetica 35 thin";
+    font-weight: bold;
+}
 .bottom
 {
     position:relative;
@@ -46,4 +50,37 @@ input[type=text]{
     @keyframes animatebottom{
     from{bottom:-300px;opacity:0} 
     to{bottom:0;opacity:1}
+}
+.modal-content1{
+    width: 100%;
+    height:220px;
+    font-family: "Helvetica 35 thin";
+    font-weight: bold;
+    position: absolute;
+    top:30%;
+    right: 0;
+    left: 0;
+    z-index:100;
+    color:white;
+    padding: 20px;
+}
+.modal-content{
+    background: rgba(0,0,0,0.8);
+    padding: 90px;
+    color:white;
+}
+.modal-content h4{
+    font-family: "Helvetica 35 thin";
+    font-weight: bold;
+    color:white;
+}
+.modal-content h5{
+    font-family: "Helvetica 35 thin";
+    font-weight: bold;
+    color:white;
+}
+.modal-content input{
+    padding: 15px;
+    font-size: 22px;
+    color:white;
 }

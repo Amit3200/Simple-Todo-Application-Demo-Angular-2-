@@ -1,19 +1,37 @@
 <body>
+    <div class="overlay"></div>
 <section>
   <div class="major bottom">
     <h1 class="animated flip">To Do List</h1>
     <h6>Developed By Amit Singh</h6>
     <input type="text" [(ngModel)]="tasks" placeholder="What you want to do today?" (keyup.enter) = 'addlist(tasks)'><br><br><!--for the loop of index; let i of index-->
-    <button type="submit" (click) = 'addlist(tasks)' [disabled]="!tasks" class="waves-effect waves-light btn">Add</button><br><br>
+    <button type="submit" (click) = 'addlist(tasks)' [disabled]="!tasks" class="waves-effect waves-light btn animated rubberBand">Add</button><br><br>
     <table class="striped" align="center">
-    <tr class="animated tada" *ngFor="let i of works;"><th><input type="checkbox" id="{{i}}" class="filled-in"><label for="{{i}}" class="itemsof">{{i}}</label></th><th>
-      <button type="submit" (click) = 'deletelist(i)' class="waves-effect waves-light btn">Delete</button></th>
-      <th><button type="submit" (click) = 'editlist(i)' class="waves-effect waves-light btn">Edit</button>
-      <div [hidden]="proedit"><input type="text" [(ngModel)]="taskedit" placeholder="Change Task!"><br>
-      <button type="submit" class="waves-effect waves-light btn" (click)="makechange(taskedit)">Submit</button>
+    <tr class="animated tada" *ngFor="let i of works;let j='index'">
+      <th>
+        <input type="checkbox" id="{{i}}" class="filled-in">
+        <label for="{{i}}" class="itemsof">{{i}}</label>
+      </th>
+      <th>
+        <button type="submit" (click) = 'deletelist(i)' class="waves-effect waves-light btn animated rubberBand">Delete</button>
+      </th>
+      <th>
+        <button type="submit" (click) = 'editlist(i)' class="waves-effect waves-light btn animated rubberBand">Edit</button>
+        <div id="jg{{j}}" [hidden]="proedit"><input type="text" [(ngModel)]="taskedit" placeholder="Change Task!"><br>
+        </div>
+      </th>
+    </tr> 
+    </table>
+    </div>   
+    <div [hidden]="krona" class="modal-content1 animated bounceIn">
+        <div class="modal-content">
+          <h4>Enter the Task</h4>
+          <input type="text" [(ngModel)]="taskedit" placeholder="What you want to do today?" (keyup.enter) = 'makechange(taskedit)' (keyup.escape)='editlist(i)'>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="waves-effect waves-light btn animated rubberBand" (click)="makechange(taskedit)">Submit</button>
+          <button class="waves-effect waves-light btn animated rubberBand" (click) = 'editlist(i)' >Close</button>
+        </div>
       </div>
-    </th></tr> 
-  </table>
-   </div>   
 </section>
 </body>
